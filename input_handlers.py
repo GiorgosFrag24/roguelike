@@ -2,7 +2,15 @@ from typing import Optional
 from actions import Action, EscapeAction, MovementAction
 import tcod.event
 
+"""
+We’re creating a class called EventHandler, which is a subclass of tcod’s EventDispatch class. 
+EventDispatch is a class that allows us to send an event to its proper method based on what 
+type of event it is. 
+"""
+
+
 class EventHandler(tcod.event.EventDispatch[Action]):
+
     def ev_quit(self, event: tcod.event.Quit) -> Optional[Action]:
         raise SystemExit()
 
