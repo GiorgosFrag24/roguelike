@@ -1,3 +1,8 @@
+"""
+Responsible for drawing the map and entities, and
+handles the player's input
+"""
+
 from typing import Set, Iterable, Any
 
 from tcod.context import Context
